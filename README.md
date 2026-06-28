@@ -25,6 +25,8 @@ diamond-prediction-app/
 │       └── index.html    # Web interface
 ├── artifacts/
 │   └── diamond_model.pkl
+├── assets/
+│   └── app_screenshot.png
 ├── data/
 │   └── diamonds_cleaned.csv
 ├── notebooks/
