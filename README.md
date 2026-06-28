@@ -6,6 +6,8 @@ An end-to-end machine learning project that predicts diamond prices using Suppor
 
 ## 🌐 Live Demo
 [https://diamond-prediction-app-gohq.onrender.com](https://diamond-prediction-app-gohq.onrender.com)
+> ⚠️ **Note:** This app is hosted on Render's free tier. If inactive for 15+ minutes, 
+> the first request may take **30-60 seconds** to load. Please be patient.
 
 ## 📸 Screenshot
 
