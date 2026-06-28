@@ -3,7 +3,7 @@
 An end-to-end machine learning project that predicts diamond prices using Support Vector Regression (SVR).
 
 ## 🚀 Live Demo
-[Diamond Price Prediction App](https://your-render-url.onrender.com)
+[Diamond Price Prediction App](https://diamond-prediction-app-gohq.onrender.com)
 
 ## 📋 Project Structure
 
@@ -64,7 +64,7 @@ diamond-prediction-app/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/diamond-prediction-app.git
+git clone https://github.com/mehmettanriverdii/diamond-prediction-app.git
 cd diamond-prediction-app
 ```
 
