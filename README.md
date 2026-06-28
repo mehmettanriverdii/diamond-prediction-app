@@ -7,55 +7,37 @@ An end-to-end machine learning project that predicts diamond prices using Suppor
 ## 🌐 Live Demo
 [https://diamond-prediction-app-gohq.onrender.com](https://diamond-prediction-app-gohq.onrender.com)
 
+## 📸 Screenshot
+
+![App Screenshot](assets/app_screenshot.png)
+
+
 ## 📋 Project Structure
 
 ```
 diamond-prediction-app/
-
 ├── app/
-
-│   ├── init.py
-
-│   ├── main.py          # FastAPI application
-
-│   ├── predictor.py     # Model loading and prediction
-
-│   ├── schemas.py       # Pydantic models
-
+│   ├── __init__.py
+│   ├── main.py           # FastAPI application
+│   ├── predictor.py      # Model loading and prediction
+│   ├── schemas.py        # Pydantic models
 │   └── templates/
-
-│       └── index.html   # Web interface
-
+│       └── index.html    # Web interface
 ├── artifacts/
-
 │   └── diamond_model.pkl
-
 ├── data/
-
 │   └── diamonds_cleaned.csv
-
 ├── notebooks/
-
 │   ├── 01_eda_and_preprocessing.ipynb
-
 │   └── 02_model_training_and_mlflow.ipynb
-
 ├── tests/
-
-│   ├── init.py
-
+│   ├── __init__.py
 │   └── test_api.py
-
 ├── .github/
-
 │   └── workflows/
-
 │       └── deploy.yml
-
 ├── Dockerfile
-
 ├── requirements.txt
-
 └── README.md
 ```
 
@@ -207,5 +189,10 @@ mlflow ui --backend-store-uri sqlite:///mlflow.db --port 5000
 
 Open [http://localhost:5000](http://localhost:5000)
 
+## 📄 License
+This project is for educational purposes and is free to use.
+
 ## 👤 Author
-Mehmet Tan Riverdii - [GitHub](https://github.com/mehmettanriverdii)
+Mehmet TANRIVERDİ - [GitHub](https://github.com/mehmettanriverdii)
+
+> **Developer Note:** This project demonstrates how to deploy an end-to-end machine learning pipeline (SVR) to production. For real-world applications, additional security, monitoring, and scaling features should be implemented.
