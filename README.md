@@ -1,9 +1,11 @@
 # 💎 Diamond Price Prediction
 
+![CI/CD](https://github.com/mehmettanriverdii/diamond-prediction-app/actions/workflows/deploy.yml/badge.svg)
+
 An end-to-end machine learning project that predicts diamond prices using Support Vector Regression (SVR).
 
-## 🚀 Live Demo
-[Diamond Price Prediction App](https://diamond-prediction-app-gohq.onrender.com)
+## 🌐 Live Demo
+[https://diamond-prediction-app-gohq.onrender.com](https://diamond-prediction-app-gohq.onrender.com)
 
 ## 📋 Project Structure
 
@@ -11,6 +13,8 @@ An end-to-end machine learning project that predicts diamond prices using Suppor
 diamond-prediction-app/
 
 ├── app/
+
+│   ├── init.py
 
 │   ├── main.py          # FastAPI application
 
@@ -24,7 +28,7 @@ diamond-prediction-app/
 
 ├── artifacts/
 
-│   └── diamond_model.pkl # Trained model
+│   └── diamond_model.pkl
 
 ├── data/
 
@@ -35,6 +39,18 @@ diamond-prediction-app/
 │   ├── 01_eda_and_preprocessing.ipynb
 
 │   └── 02_model_training_and_mlflow.ipynb
+
+├── tests/
+
+│   ├── init.py
+
+│   └── test_api.py
+
+├── .github/
+
+│   └── workflows/
+
+│       └── deploy.yml
 
 ├── Dockerfile
 
@@ -58,7 +74,33 @@ diamond-prediction-app/
 | Experiment Tracking | MLflow |
 | API | FastAPI, Uvicorn |
 | Logging | Loguru |
+| Testing | Pytest |
 | Containerization | Docker |
+| CI/CD | GitHub Actions |
+| Deployment | Render |
+
+## 📈 Model Performance
+
+| Metric | Value |
+|---|---|
+| R² Train | 0.9667 |
+| R² Test | 0.9651 |
+| MAE | $352 |
+| RMSE | $739 |
+
+## 🔍 Feature Importance
+
+| Feature | Importance |
+|---|---|
+| carat | 0.439 |
+| cut | 0.238 |
+| color | 0.229 |
+| clarity | 0.219 |
+| x | 0.119 |
+| table | 0.079 |
+| y | 0.005 |
+| depth | 0.005 |
+| z | 0.004 |
 
 ## ⚙️ Installation
 
@@ -87,12 +129,17 @@ pip install -r requirements.txt
 ### 4. Download dataset
 Download `diamonds.csv` from [Kaggle](https://www.kaggle.com/datasets/shivam2503/diamonds) and place it in the `data/` folder.
 
-### 5. Run the application
+### 5. Run notebooks
+Run the notebooks in order:
+1. `01_eda_and_preprocessing.ipynb`
+2. `02_model_training_and_mlflow.ipynb`
+
+### 6. Run the application
 ```bash
 uvicorn app.main:app --reload --port 8000
 ```
 
-Open `http://localhost:8000`
+Open [http://localhost:8000](http://localhost:8000)
 
 ## 🐳 Docker
 
@@ -104,28 +151,17 @@ docker build -t diamond-prediction-app .
 docker run -p 8000:8000 diamond-prediction-app
 ```
 
-## 📈 Model Performance
+## 🧪 Tests
 
-| Metric | Value |
-|---|---|
-| R² Train | 0.9667 |
-| R² Test | 0.9651 |
-| MAE | $352 |
-| RMSE | $739 |
+```bash
+pip install pytest httpx
+pytest tests/ -v
+```
 
-## 🔍 Feature Importance
-
-| Feature | Importance |
-|---|---|
-| carat | 0.439 |
-| cut | 0.238 |
-| color | 0.229 |
-| clarity | 0.219 |
-| x | 0.119 |
-| table | 0.079 |
-| y | 0.005 |
-| depth | 0.005 |
-| z | 0.004 |
+3 tests:
+- `test_health` → health endpoint check
+- `test_predict` → prediction endpoint check
+- `test_invalid_input` → input validation check
 
 ## 📡 API Endpoints
 
@@ -134,6 +170,7 @@ docker run -p 8000:8000 diamond-prediction-app
 | `/` | GET | Web interface |
 | `/predict` | POST | Predict diamond price |
 | `/health` | GET | Health check |
+| `/docs` | GET | Swagger UI |
 
 ### Predict Example
 
@@ -162,5 +199,13 @@ curl -X POST "http://localhost:8000/predict" \
 }
 ```
 
+## 🔬 MLflow
+
+```bash
+mlflow ui --backend-store-uri sqlite:///mlflow.db --port 5000
+```
+
+Open [http://localhost:5000](http://localhost:5000)
+
 ## 👤 Author
-Mehmet TANRIVERDİ - [GitHub](https://github.com/mehmettanriverdii)
+Mehmet Tan Riverdii - [GitHub](https://github.com/mehmettanriverdii)
