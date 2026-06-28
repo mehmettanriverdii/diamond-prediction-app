@@ -1,6 +1,6 @@
 # 💎 Diamond Price Prediction
 
-![CI/CD](https://github.com/mehmettanriverdii/diamond-prediction-app/actions/workflows/deploy.yml/badge.svg)
+[![CI/CD](https://github.com/mehmettanriverdii/diamond-prediction-app/actions/workflows/deploy.yml/badge.svg)](https://github.com/mehmettanriverdii/diamond-prediction-app/actions/workflows/deploy.yml)
 
 An end-to-end machine learning project that predicts diamond prices using Support Vector Regression (SVR).
 
