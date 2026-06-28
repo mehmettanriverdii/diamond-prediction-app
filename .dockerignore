@@ -1,0 +1,11 @@
+venv/
+.idea/
+__pycache__/
+*.pyc
+.git/
+notebooks/
+logs/
+mlruns/
+mlflow.db
+*.ipynb
+data/diamonds.csv
